@@ -88,7 +88,7 @@ class Google_ExtendedAccess {
 		if ( get_post_type() === 'post' ) { // Add slug in condition.
 			// Newspack Extended Access Script.
 			$assets_path = plugins_url( '../assets/', __FILE__ );
-			wp_register_script( 'newspack-swg', $assets_path . 'js/newspack-swg.js', array(), NEWSPACK_SWG_SCRIPT_VERSION, false );
+			wp_register_script( 'newspack-swg', $assets_path . 'js/newspack-swg.js', array(), NEWSPACK_SWG_SCRIPT_VERSION, array( 'strategy' => 'async' ) );
 			wp_enqueue_script( 'newspack-swg' );
 
 			$home_url_parts    = wp_parse_url( home_url() );
@@ -128,7 +128,7 @@ class Google_ExtendedAccess {
 			wp_print_script_tag(
 				array(
 					'id'     => 'google-news-swg-gaa',
-					'async'  => true,
+					'defer'  => true,
 					'src'    => esc_url( 'https://news.google.com/swg/js/v1/swg-gaa.js' ),
 					'onload' => 'initGaaMetering()',
 				)
