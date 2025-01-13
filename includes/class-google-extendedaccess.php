@@ -103,6 +103,7 @@ class Google_ExtendedAccess {
 					'allowedReferrers'  => $allowed_referrers,
 					'postID'            => get_the_ID(),
 					'googleClientApiID' => get_option( 'newspack_extended_access__google_client_api_id', '' ),
+					'myAccountURL'      => wc_get_page_permalink( 'myaccount' )
 				)
 			);
 
