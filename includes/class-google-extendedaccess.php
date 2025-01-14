@@ -10,7 +10,7 @@ namespace Newspack\ExtendedAccess;
 
 use Newspack;
 
-define( 'NEWSPACK_SWG_SCRIPT_VERSION', '1.0' );
+define( 'NEWSPACK_SWG_SCRIPT_VERSION', '1.0.1' );
 
 /**
  * Registers required scripts for SwG implementation
