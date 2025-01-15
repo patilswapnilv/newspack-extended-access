@@ -10,7 +10,7 @@ namespace Newspack\ExtendedAccess;
 
 use Newspack;
 
-define( 'NEWSPACK_SWG_SCRIPT_VERSION', '1.0' );
+define( 'NEWSPACK_SWG_SCRIPT_VERSION', '1.0.1' );
 
 /**
  * Registers required scripts for SwG implementation
@@ -103,6 +103,7 @@ class Google_ExtendedAccess {
 					'allowedReferrers'  => $allowed_referrers,
 					'postID'            => get_the_ID(),
 					'googleClientApiID' => get_option( 'newspack_extended_access__google_client_api_id', '' ),
+					'myAccountURL'      => wc_get_page_permalink( 'myaccount' )
 				)
 			);
 
